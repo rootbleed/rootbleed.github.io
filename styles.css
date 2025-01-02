@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    /* Allow scrolling */
 }
 
 .background {
@@ -13,12 +12,12 @@ body {
     height: 100%;
     background: url('assets/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(8px); /* Increased blur for a smoother look */
-    z-index: 0; /* Behind other content */
+    filter: blur(8px);
+    z-index: -1; /* Ensure it stays behind content */
 }
 
 .container {
-    position: relative;
+    position: relative; /* Ensure this is relative */
     z-index: 1; /* Above the background */
     padding: 20px;
     max-width: 1200px; /* Limit the width for better readability */
@@ -101,12 +100,10 @@ footer {
 
 @keyframes slideIn {
     from {
-        transform: translateY(-20px);
-        opacity: 0;
+        transform: translate Y(20px);
     }
     to {
         transform: translateY(0);
-        opacity: 1;
     }
 }
 
